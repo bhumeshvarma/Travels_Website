@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/paris.css">
+</head>
+<body>
+    <!-- nav Section -->
+    <nav class="nav-content">
+        <img src="../Assets/images/Logo.png" alt="logo" id="logo">
+        <span id="logo-heading">TOURS AND TRAVELS</span>
+        <h2>Welcome To Nani Tours&Travels</h2>
+        <div class="links">
+            <a href="../HTML/home.html">Home</a>
+            <a href="#package">Packages</a>
+            <a href="#contact">Contact</a>
+            <a href="#places">Places</a></div>
+    </nav>
+    <!-- home section -->
+     <section class="home">
+        <img src="../Assets/images/NewYork.jpg" alt="">
+     </section>
+    <!-- to visit places in paris -->
+     <section class="places" id="places">
+        <h1>Top Attractions in New York</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Statue 2.jpg" alt="">
+                    <h3>Statue of Liberty</h3>
+                    <p>Experience one of the most iconic symbols of freedom and democracy in the world.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About the Liberty</h3>
+                <pre>                   🗽 Key Facts about the Statue of Liberty:
+
+                    Location: Liberty Island, New York Harbor, New York City, USA.
+                    Gift From: France to the United States as a symbol of friendship
+                     and to celebrate the centennial of American independence.
+                    Designer: French sculptor Frédéric Auguste Bartholdi.
+                    Structural Engineer: Gustave Eiffel, who also designed the Eiffel 
+                    Tower.
+                    Dedicated On: October 28, 1886.
+                    Material: Made of copper sheets, which have naturally oxidized over 
+                    time to form the statue's iconic green patina.
+                    Height:
+                    From base to torch: 305 feet (93 meters).
+                    From heel to top of head: 151 feet (46 meters).
+                    Weight: Approximately 225 tons.
+                    
+                </pre>
+                </div>    
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Central Park.jpg" alt="">
+                    <h3>The Central Park</h3>
+                    <p>Discover the green oasis in the heart of New York City.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About the Central Park</h3>
+                <pre> 
+                    ✨ Top Attractions in Central Park:
+
+                  Bethesda Terrace and Fountain: Known as the heart of Central Park,
+                  this iconic area features stunning architecture and a grand fountain.
+                  The Mall and Literary Walk: A picturesque, tree-lined walkway famous 
+                  for statues of famous writers like Shakespeare and Robert Burns.
+                  Bow Bridge: One of the most romantic and photographed spots in the park.
+                  Strawberry Fields: A peaceful memorial to John Lennon, marked with the 
+                  famous "Imagine" mosaic.
+                  Belvedere Castle: Offers panoramic views of the park and houses a visitor
+                  center and weather station.
+                  Central Park Zoo: A small but charming zoo with animals from around the world.
+                  Great Lawn: A vast green space perfect for picnics, sunbathing, and sports. 
+                </pre>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Time Square.jpg" alt="">
+                    <h3>Times Square</h3>
+                    <p>Experience the vibrant energy of the Crossroads of the World.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About Times Square</h3>
+                <pre>
+                ✨ Top Attractions in Times Square:
+
+                🎭 Broadway Theaters – Catch a world-renowned Broadway show like The Lion King,
+                Hamilton, or Wicked.
+                🟩 Times Square Plaza – A pedestrian-only area with seating, perfect for 
+                people-watching and photos.
+                🔔 New Year's Eve Ball Drop – One of the world’s most famous New Year’s
+                celebrations, where millions gather to watch the countdown.
+                🏢 One Times Square – The site of the famous ball drop, featuring massive 
+                electronic billboards.
+                🛍️ Shops and Stores – Visit flagship stores like M&M’s World, Hershey’s
+                 Chocolate World, and Disney Store.
+                🏙️ The NASDAQ MarketSite – Known for its giant electronic display featuring 
+                stock market updates.
+                </pre>
+                </div>  
+            </div>
+        </div>
+     </section>
+     
+     <section class="package" id="package">
+        <div><h1 id="head">Travel Packages for Paris</h1></div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>Low Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $249</span>
+                <button type="button" onclick="bookPackage('Low Budget', 249)">Book Now</button>
+            </div>
+        </div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>Medium Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $499</span>
+                <button type="button" onclick="bookPackage('Medium Budget', 499)">Book Now</button>
+            </div>
+        </div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>High Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $999</span>
+                <button type="button" onclick="bookPackage('High Budget', 999)">Book Now</button>
+            </div>
+     </section>
+     <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div id="contact-us">
+        <h1>Contact Us</h1>
+        <div id="form_div">
+            <form action="">
+            <h2 class="form-head">Name</h2>
+            <input type="text" class="inputs">
+            <h2 class="form-head">Email</h2>
+            <input type="email" class="inputs">
+            <h2 class="form-head">Message</h2>
+            <input type="text" class="inputs">
+            <button type="submit" id="sub-btn">Send</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  <nav class="rights"><h2>Nani Tours&Travels © 2025. All Rights Reserved.</h2></nav>
+  <script>
+    function bookPackage(category, price) {
+        const bookingId = 'NewYark-' + Math.floor(100000 + Math.random() * 900000); // 6-digit ID
+        localStorage.setItem('bookingId', bookingId);
+        localStorage.setItem('packageCategory', category);
+        localStorage.setItem('packagePrice', price);
+        window.location.href = "../HTML/payment.html"; // Redirect to payment page
+    }
+</script>
+</body>
+</html>

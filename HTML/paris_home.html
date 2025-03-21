@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/paris.css">
+</head>
+<body>
+    <!-- nav Section -->
+    <nav class="nav-content">
+        <img src="../Assets/images/Logo.png" alt="logo" id="logo">
+        <span id="logo-heading">TOURS AND TRAVELS</span>
+        <h2>Welcome To Nani Tours&Travels</h2>
+        <div class="links">
+            <a href="../HTML/home.html">Home</a>
+            <a href="#package">Packages</a>
+            <a href="#contact">Contact</a>
+            <a href="#places">Places</a></div>
+    </nav>
+    <!-- home section -->
+     <section class="home">
+        <img src="../Assets/images/Paris.jpg" alt="">
+     </section>
+    <!-- to visit places in paris -->
+     <section class="places" id="places">
+        <h1>Top Attractions In paris</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Eiffel 3.jpg" alt="">
+                    <h3>Eiffel Tower</h3>
+                    <p>One of the most iconic landmarks in the world, standing tall in the heart of Paris.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About the Eiffel Tower</h3>
+                <pre>                    🗼 Key Facts:
+
+                    Constructed: 1887–1889
+                    Architect: Designed by Gustave Eiffel's engineering company.
+                    Height: Originally 300 meters (984 feet) tall, later extended to 330 meters. 
+                    Material: Made of wrought iron, weighing approximately 10,100 tons.
+                    Purpose: Built as the entrance arch to the 1889 Exposition Universelle 
+                    (World’s Fair) to celebrate the 100th anniversary of the French Revolution.
+
+                    📸 Visiting the Eiffel Tower:
+
+                    Millions of visitors climb or take elevators to its levels each year.
+                    At night, it sparkles every hour on the hour for 5 minutes thanks to over 
+                    20,000 twinkling lights.
+                    There are restaurants on the first and second levels, and a champagne bar at the top.
+                </pre>
+                </div>    
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Louvre.jpg" alt="">
+                    <h3>The Louvre Museum</h3>
+                    <p>Explore the world's largest and most visited museum, a treasure trove of art and history.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About the Louvre Museum</h3>
+                <pre> 
+                    🌟 Famous Artworks
+
+                    Venus de Milo — an ancient Greek statue.
+                    Winged Victory of Samothrace — a stunning Hellenistic sculpture.
+                    Liberty Leading the People by Eugène Delacroix.
+                    The Coronation of Napoleon by Jacques-Louis David.
+
+                    🏛️ Architectural Highlights
+
+                    The museum is known for its iconic glass pyramid entrance designed by 
+                    architect I.M. Pei, inaugurated in 1989.
+                    The Louvre Palace itself reflects centuries of French architecture,
+                    from medieval to Renaissance and modern styles.
+                </pre>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Montmartre (1).jpg" alt="">
+                    <h3>Montmartre</h3>
+                    <p>Discover the artistic and historic heart of Paris, known for its charming streets and stunning views.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About Montmartre</h3>
+                <pre>
+                    📸 Best Photo Spots
+
+                    Steps of the Sacré-Cœur with panoramic city views.
+                    The charming Maison Rose, a picturesque café.
+                    The hidden Passage de la Sorcière for a more off-the-beaten-path experience.
+
+                    🚶‍♂️ Exploring Montmartre
+
+                    Stroll along cobbled streets and discover hidden alleys, art studios, and historic cafés.
+                    Visit Le Consulat, one of the oldest cafés where famous artists used to gather.
+                    Walk up the iconic Rue Lepic, known for its artistic history and vibrant market.
+                </pre>
+                </div>  
+            </div>
+        </div>
+     </section>
+     
+     <section class="package" id="package">
+
+        <div><h1 id="head">Travel Packages for Paris</h1></div>
+        <div class="book-container"> 
+    <div class="book">
+        <h2>Low Budget</h2>
+        <span>Perfect for travelers on a budget. Starting at $249</span>
+        <button type="button" onclick="bookPackage('Low Budget', 249)">Book Now</button>
+    </div>
+</div>
+<div class="book-container"> 
+    <div class="book">
+        <h2>Medium Budget</h2>
+        <span>Perfect for travelers on a budget. Starting at $499</span>
+        <button type="button" onclick="bookPackage('Medium Budget', 499)">Book Now</button>
+    </div>
+</div>
+<div class="book-container"> 
+    <div class="book">
+        <h2>High Budget</h2>
+        <span>Perfect for travelers on a budget. Starting at $999</span>
+        <button type="button" onclick="bookPackage('High Budget', 999)">Book Now</button>
+    </div>
+</div>
+
+     </section>
+     <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div id="contact-us">
+        <h1>Contact Us</h1>
+        <div id="form_div">
+            <form action="">
+            <h2 class="form-head">Name</h2>
+            <input type="text" class="inputs">
+            <h2 class="form-head">Email</h2>
+            <input type="email" class="inputs">
+            <h2 class="form-head">Message</h2>
+            <input type="text" class="inputs">
+            <button type="submit" id="sub-btn">Send</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  <nav class="rights"><h2>Nani Tours&Travels © 2025. All Rights Reserved.</h2></nav>
+  <script>
+    function bookPackage(category, price) {
+        const bookingId = 'PARIS-' + Math.floor(100000 + Math.random() * 900000); // 6-digit ID
+        localStorage.setItem('bookingId', bookingId);
+        localStorage.setItem('packageCategory', category);
+        localStorage.setItem('packagePrice', price);
+        window.location.href = "../HTML/payment.html"; // Redirect to payment page
+    }
+</script>
+
+</body>
+</html>

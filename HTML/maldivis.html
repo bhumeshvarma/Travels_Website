@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/paris.css">
+</head>
+<body>
+    <!-- nav Section -->
+    <nav class="nav-content">
+        <img src="../Assets/images/Logo.png" alt="logo" id="logo">
+        <span id="logo-heading">TOURS AND TRAVELS</span>
+        <h2>Welcome To Nani Tours&Travels</h2>
+        <div class="links">
+            <a href="../HTML/home.html">Home</a>
+            <a href="#package">Packages</a>
+            <a href="#contact">Contact</a>
+            <a href="#places">Places</a></div>
+    </nav>
+    <!-- home section -->
+     <section class="home">
+        <img src="../Assets/images/Maldives.jpg" alt="">
+     </section>
+    <!-- to visit places in paris -->
+     <section class="places" id="places">
+        <h1>Top Attractions in Maldivess</h1>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Maldives Beach.jpg" alt="">
+                    <h3>Pristine Beaches</h3>
+                    <p>Discover the beauty of the Maldives, where turquoise waters meet white sand beaches.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About the Beaches</h3>
+                <pre>                   🌍 Famous Pristine Beaches Around the World
+
+                    Navagio Beach, Greece: Known as Shipwreck Beach, accessible only by boat
+                    with stunning cliffs surrounding it.
+                    Whitehaven Beach, Australia: Famous for its white silica sands and
+                    crystal-clear waters.
+                    Anse Source d'Argent, Seychelles: Renowned for granite boulders and
+                    calm turquoise waters.
+                    Seven Mile Beach, Cayman Islands: A long stretch of coral-sand beach
+                    perfect for water sports.
+                    Radhanagar Beach, India: Located on Havelock Island, known for its lush
+                    green backdrop and soft white sand.
+                </pre>
+                </div>    
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Maldives Luxury.jpg" alt="">
+                    <h3>The Luxury Resorts</h3>
+                    <p>Stay in world-class overwater villas and beachfront suites in the Maldives.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About Luxury Resorts</h3>
+                <pre> 
+                1. Kurumba Maldives
+                As the country's first resort, Kurumba Maldives combines rich history with modern luxury.
+                Located on Vihamanaafushi island in the North Malé Atoll, 
+                it boasts 180 rooms and villas, eight restaurants, and a range of recreational activities.
+
+                2.JA Manafaru
+                Situated in the northernmost part of the Maldives on Manafaru island in Haa Alifu Atoll,
+                JA Manafaru offers 84 villas, each with a private pool. 
+
+                3. Overwater Villas
+                The Maldives is famed for its overwater villas, ranging from traditional thatched-roof designs
+                to expansive modern retreats. Notable options include Kanuhura's two-bedroom 
+                villa with ocean views and an infinity pool
+
+                </pre>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../Assets/images/Scuba Diving.jpg" alt="">
+                    <h3>Scuba Diving</h3>
+                    <p>Explore the underwater paradise of the Maldives with vibrant marine life and coral reefs.</p>
+                </div>
+
+            </div>
+            <div class="card-about">
+                <div class="card-content">
+                    <h3>About Scuba Diving in the Maldives</h3>
+                <pre>🌊               Types of Scuba Diving
+
+                    Open Water Diving – Basic recreational diving in oceans, seas, or lakes.
+                    Wreck Diving – Exploring sunken ships and aircraft.
+                    Cave Diving – Diving into underwater caves (requires advanced training).
+                    Night Diving – Diving after sunset to observe nocturnal marine life.
+                    Deep Diving – Diving deeper than 18 meters (60 feet).
+                    Drift Diving – Letting the current carry you along a dive route.
+                    Technical Diving – Going beyond recreational diving limits with specialized equipment.
+                    Free Diving – Diving without breathing apparatus, relying on breath-holdin
+                </pre>
+                </div>  
+            </div>
+        </div>
+     </section>
+     
+     <section class="package" id="package">
+        <div><h1 id="head">Travel Packages for Paris</h1></div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>Low Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $249</span>
+                <button type="button" onclick="bookPackage('Low Budget', 249)">Book Now</button>
+            </div>
+        </div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>Medium Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $499</span>
+                <button type="button" onclick="bookPackage('Medium Budget', 499)">Book Now</button>
+            </div>
+        </div>
+        <div class="book-container"> 
+            <div class="book">
+                <h2>High Budget</h2>
+                <span>Perfect for travelers on a budget. Starting at $999</span>
+                <button type="button" onclick="bookPackage('High Budget', 999)">Book Now</button>
+            </div>
+        </div>
+     </section>
+     <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div id="contact-us">
+        <h1>Contact Us</h1>
+        <div id="form_div">
+            <form action="">
+            <h2 class="form-head">Name</h2>
+            <input type="text" class="inputs">
+            <h2 class="form-head">Email</h2>
+            <input type="email" class="inputs">
+            <h2 class="form-head">Message</h2>
+            <input type="text" class="inputs">
+            <button type="submit" id="sub-btn">Send</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  <nav class="rights"><h2>Nani Tours&Travels © 2025. All Rights Reserved.</h2></nav>
+  <script>
+    function bookPackage(category, price) {
+        const bookingId = 'MALDIVES-' + Math.floor(100000 + Math.random() * 900000); // 6-digit ID
+        localStorage.setItem('bookingId', bookingId);
+        localStorage.setItem('packageCategory', category);
+        localStorage.setItem('packagePrice', price);
+        window.location.href = "../HTML/payment.html"; // Redirect to payment page
+    }
+</script>
+</body>
+</html>

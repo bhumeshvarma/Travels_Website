@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Confirmation!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(../Assets/images/flower.jpg);
+            background-size: 1600px;
+            background-repeat: no-repeat;
+        }
+        .container {
+            background-color:rgba(246, 247, 249,0.300);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: red;
+        }
+        .booking-id {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e0f0ff;
+            color: #007BFF;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 10px;
+            animation: fadeIn 1s ease-in-out;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+        }
+        a, .btn {
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+        }
+        .btn.copy {
+            background-color: #28a745;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .social-icons a {
+            margin: 0 8px;
+            color:white;
+            font-size: 1.2rem;
+            border-radius: 26px;
+        }
+        i{
+            margin-right:8px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        html{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Thank You for Your Confirmation!</h1>
+        <p>Your payment has been processed successfully.</p>
+        <p>Your booking ID is:</p>
+        <div id="display-booking-id" class="booking-id">Loading...</div>
+
+        <!-- Copy Button -->
+        <button class="btn copy" onclick="copyBookingId()">Copy Booking ID</button>
+
+        <!-- Back to Home Button -->
+        <a href="../HTML/home.html" class="btn">Go to Home</a>
+
+        <p>We are excited to have you join us for this unforgettable journey!</p>
+        <p>For any assistance, please feel free to <a href="../HTML/home.html">contact us</a></p>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Appani Bhumesh Appani"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/bhumesh_varma__"><i class="fa-brands fa-instagram"></i>Instagram</a>
+        </div>
+
+        <div class="footer">
+            Nani Tours&Travels© 2025. All Rights Reserved.
+        </div>
+    </div>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Retrieve and display the booking ID
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookingId = urlParams.get('bookingId');
+            const displayIdElement = document.getElementById('display-booking-id');
+
+            if (bookingId) {
+                displayIdElement.textContent = bookingId;
+            } else {
+                displayIdElement.textContent = "Booking ID not found.";
+                alert("No booking ID found. Please check your confirmation email.");
+            }
+
+            // Optional: Auto-redirect after 10 seconds
+            // setTimeout(() => window.location.href = "index.html", 10000);
+        };
+
+        // Copy Booking ID to Clipboard
+        function copyBookingId() {
+            const bookingId = document.getElementById('display-booking-id').textContent;
+            if (bookingId && bookingId !== "Booking ID not found.") {
+                navigator.clipboard.writeText(bookingId).then(() => {
+                    alert("Booking ID copied to clipboard!");
+                }).catch(err => {
+                    alert("Failed to copy Booking ID.");
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>

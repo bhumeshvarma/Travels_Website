@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="./Css/login.css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to handle user sign-in
+            function signInUser(event) {
+                event.preventDefault(); // Prevent form reload
+
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("signInPassword").value;
+
+                const storedUser = JSON.parse(localStorage.getItem("userData"));
+
+                // Validate the user's credentials
+                if (storedUser && storedUser.email === username && storedUser.password === password) {
+                    alert("Sign-In Successful!");
+                    window.location.href = "../HTML/home.html"; // Redirect on successful sign-in
+                } else {
+                    alert("Invalid email or password!");
+                }
+            }
+
+            // Attach event listener to the sign-in button
+            document.getElementById("sign_in").addEventListener("click", signInUser);
+        });
+    </script>
+</head>
+<body>
+    <video src="./Assets/videos/motion video.mp4" autoplay muted loop id="background_video"></video>
+    
+    <form id="login_form">
+        <div>
+            <h1 class="heading">NANI TOURS & TRAVELS</h1>
+            <p class="heading">Please Sign In To Continue</p>
+
+            <h4 class="position_heading">User Name</h4>
+            <input type="email" id="username" placeholder="Enter Email" required class="position">
+
+            <h4 class="position_heading">Password</h4>
+            <input class="position" type="password" id="signInPassword" placeholder="Enter Password" required>
+
+            <h5 class="position_heading">Forgot Password?</h5>
+
+            <!-- Updated Button (No <a> tag, type="button" to prevent form submission) -->
+            <button type="button" id="sign_in">Sign In</button>
+
+            <p id="register">New User? <a href="./HTML/register.html">Sign Up Now</a></p>
+        </div>
+    </form>
+</body>
+</html>

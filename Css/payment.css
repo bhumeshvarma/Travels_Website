@@ -1,0 +1,74 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body { font-family: Arial, sans-serif; padding: 20px;
+background-image: url(../Assets/images/flower.jpg);
+background-size: 1600px;
+background-repeat: no-repeat;}
+.payment-summary, .payment-form { 
+margin-bottom: 20px; 
+}
+#payment-message { color: red; }
+.main-div{
+    width: 600px;
+    height: 600px;
+    background-color:rgba(255, 255, 255,0.300);
+    border-radius: 20px;
+    position: relative;
+    left: 400px;
+    top: 20px;
+}
+.main-div h2{
+    text-align: center;
+    position: relative;
+    top: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color:magenta;
+}
+.payment-summary p{
+    position: relative;
+    left: 180px;
+    top: 80px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700px;
+    font-size: 20px;
+    color:blue;
+}
+#payment-form{
+    position: relative;
+    top: 80px;
+}
+#payment-form input{
+    margin-top: 20px;
+    position: relative;
+    left: 180px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border:2px solid aqua;
+    outline: none;
+}
+button{
+    position: relative;
+    left: 280px;
+    top: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border-radius: 15px;
+    outline: none;
+    border-left:4px solid red ;
+    border-bottom: none;
+    border-right: 4px solid red;
+    border-top: none;
+}
+button:hover{
+    cursor: pointer;
+}
